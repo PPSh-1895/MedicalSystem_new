@@ -18,7 +18,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/excise")
-public class ExciseController {
+public class Controller {
     @Autowired(required = false)
     private PatientMapper patientMapper;
     @Autowired(required = false)
@@ -58,9 +58,5 @@ public class ExciseController {
         drugMapper.insert(new Drug(drug_name));
         map.put("result","success!");
         return map;
-    }
-    public static void main()
-    {
-        SpringApplication.run(ExciseController.class);
     }
 }
